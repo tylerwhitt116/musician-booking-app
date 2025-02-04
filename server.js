@@ -40,7 +40,7 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
 io.on('connection', (socket) => {
     console.log( 'User connected');
     socket.on('notification', (data) => {
-        io.emit('newNotifcation', data);
+        io.emit('newNotification', data);
     });
     socket.on('disconnect', () => {
         console.log('User Disconnected')
